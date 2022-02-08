@@ -1,20 +1,8 @@
-.buttonAction{
-    
+body{
+    height: 100vh;
     background-repeat: repeat;
     background-color: #E6D0E9;
     background-image: linear-gradient(to bottom, transparent, transparent 16.6667%, #E6D0E9 16.6667%),
     linear-gradient(to right, #FFFFFF, #FFFFFF 16.6667%, #E6D0E9 16.6667%);
     background-size: 6px 6px;
-}
-.triangle{
-    position: absolute;
-width: 100px;
-height: 100px;
-bottom: -10px;
-background-repeat: no-repeat;
-background-size: contain;
-}
-#rightT{
-    transform: scaleX(-1);
-    right: 0px;
 }
