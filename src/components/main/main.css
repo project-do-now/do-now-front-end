@@ -1,13 +1,19 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "SunnySpells";
+    font-family: "SunnySpells","KOTRAHOPE";
     box-sizing: border-box;
   }
   @font-face {
     font-family: "SunnySpells";
     src: url("../../fonts/SunnyspellsRegular.otf") format("truetype");
   }
+  @font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
   .header{
     background-repeat: repeat;
     background-color: #E6D0E9;
@@ -59,12 +65,33 @@
     margin-left: 20px;
     justify-content: space-between;
     width:630px;
+    margin-bottom: 100px;
 }
 .monthlyPlan{
     width: 146px;
     height: 360px;
     background-color: #FFFFFF;
     margin-top: 124px;
+    font-family: KOTRAHOPE;
+font-style: normal;
+font-weight: lighter;
+font-size: 16px;
+text-align: center;
+color: #843893;
+padding-top: 15px;
+display: flex;
+flex-direction: column;
+text-align: left;
+
+}
+#monthly{
+  font-family: Sunny Spells;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+text-align: center;
+color: #843893;
+margin-bottom: 10px;
 }
 .SMT{
   height: fit-content;
@@ -78,6 +105,8 @@
     margin-top: 41px;
     margin-right: 60px;
     background-color: #FFFFFF;
+    margin-bottom: 100px;
+    margin-left: 8%;
 }
 .rings{
     width: 100px;
@@ -142,7 +171,7 @@ padding-left: 8px;
     background-size: 6px 6px;
 }
 .triangle{
-    position: absolute;
+    position: fixed;
 width: 100px;
 height: 100px;
 bottom: -10px;
@@ -153,4 +182,58 @@ background-size: contain;
 #rightT{
     transform: scaleX(-1);
     right: 0px;
+}
+.this{
+  opacity: 1;
+}
+.other {
+  opacity: 0.25;
+}
+.today {
+  width: 154px;
+height: 80px;
+  margin-left: -8px;
+  padding-left: 8px;
+  background: #F0DFEF;
+border: 2px solid #D3A6D6;
+}
+.flower{
+  background-image: url("./small_flower.png");
+}
+.allPlans{
+  width: 146px;
+    height: 360px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.allPlans::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.plans{
+  display: flex;
+  flex-direction: row;
+}
+.plan{
+  font-family: KOTRAHOPE;
+  text-decoration: underline 1px dashed #9451A0;
+}
+#newPlan{
+  width: 100%;
+  border:none;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #843893;
+  background-color: transparent;
+  text-decoration: underline 1px dashed #9451A0;
+}
+#newPlan:focus{
+  outline:none;
+  background-color: transparent;
+  color: #843893;
 }
