@@ -6,3 +6,7 @@ body{
     linear-gradient(to right, #FFFFFF, #FFFFFF 16.6667%, #E6D0E9 16.6667%);
     background-size: 6px 6px;
 }
+:visited, :link{
+    color: #843893;
+    text-decoration: none;
+}

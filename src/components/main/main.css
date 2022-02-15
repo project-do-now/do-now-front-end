@@ -149,7 +149,6 @@ text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
     flex-direction: row;
     flex-wrap: wrap;
     font-size: 20px;
-line-height: 32px;
 color: #843893;
 
   }
@@ -233,6 +232,33 @@ border: 2px solid #D3A6D6;
   text-decoration: underline 1px dashed #9451A0;
 }
 #newPlan:focus{
+  outline:none;
+  background-color: transparent;
+  color: #843893;
+}
+.schedule{
+  font-size: 16px;
+  overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.schedule::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+#newSchedule{
+  width: 100%;
+  border:none;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #843893;
+  background-color: transparent;
+  text-decoration: underline 1px dashed #9451A0;
+}
+#newSchedule:focus{
   outline:none;
   background-color: transparent;
   color: #843893;
