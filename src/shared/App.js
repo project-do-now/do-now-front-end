@@ -3,6 +3,7 @@ import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import styled from "styled-components";
 import {Login, Register, Diary} from '../pages';
 import './App.css';
+import Main from '../components/main/main';
 class App extends Component {
   handleCreate = (data) => {
     console.log(data);
@@ -13,7 +14,8 @@ class App extends Component {
         <Routes>
           <Route path='/' element={<Login onCreate={this.handleCreate}/>}/>
           <Route path='/register' element={<Register onCreate={this.handleCreate}/>}/>
-          <Route path='/diary' element={<Diary onCreate={this.handleCreate}/>}/>
+          <Route path='/diary' element={<Diary onCreate={this.handleCreate}/>}/>        
+          <Route path='/calendar' element={<Main/>}  />
         </Routes>
       </div>
     );

@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "SunnySpells","KOTRAHOPE";
+    box-sizing: border-box;
+  }
+  @font-face {
+    font-family: "SunnySpells";
+    src: url("../../fonts/Sunny-Spells.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'KOTRAHOPE';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2110@1.0/KOTRAHOPE.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+  .header{
+    background-repeat: repeat;
+    background-color: #E6D0E9;
+    background-image: linear-gradient(to bottom, transparent, transparent 16.6667%, #E6D0E9 16.6667%),
+    linear-gradient(to right, #FFFFFF, #FFFFFF 16.6667%, #E6D0E9 16.6667%);
+    background-size: 6px 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-family: 'Sunny Spells', sans-serif;
+}
+.month{
+    margin-left: 58px;
+    margin-top:12px;
+    font-size: 88px;
+    text-decoration-line: underline;
+    color: #FFF9AE;
+    text-shadow: 4px 3px 4px #968A8E;
+}
+.search{
+    margin-top: 70px;
+    margin-left: 164px;
+    
+}
+.searchbox{
+    border: none;
+    width: 200px;
+    height: 28px;
+    font-size: 21px;
+    background-image: url("/src/search.svg");
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y: center;
+}
+.main{
+    background-repeat: repeat;
+    background-color: #E6D0E9;
+    background-image: linear-gradient(to bottom, transparent, transparent 16.6667%, #E6D0E9 16.6667%),
+    linear-gradient(to right, #FFFFFF, #FFFFFF 16.6667%, #E6D0E9 16.6667%);
+    background-size: 6px 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.left{
+    display: flex;
+    flex-direction: row;
+    margin-left: 20px;
+    justify-content: space-between;
+    width:630px;
+    margin-bottom: 100px;
+}
+.monthlyPlan{
+    width: 146px;
+    height: 360px;
+    background-color: #FFFFFF;
+    margin-top: 124px;
+    font-family: KOTRAHOPE;
+font-style: normal;
+font-weight: lighter;
+font-size: 16px;
+text-align: center;
+color: #843893;
+padding-top: 15px;
+display: flex;
+flex-direction: column;
+text-align: left;
+
+}
+#monthly{
+  font-family: Sunny Spells;
+font-style: normal;
+font-weight: normal;
+font-size: 20px;
+text-align: center;
+color: #843893;
+margin-bottom: 10px;
+}
+.SMT{
+  height: fit-content;
+    width: 462px;
+    margin-top: 41px;
+    background-color: #FFFFFF;
+}
+.WTFS{
+    width: 616px;
+    height: fit-content;
+    margin-top: 41px;
+    margin-right: 60px;
+    background-color: #FFFFFF;
+    margin-bottom: 100px;
+    margin-left: 8%;
+}
+.rings{
+    width: 100px;
+    height: 100vh;
+    top: 0px;
+    bottom: 0px;
+    left: 720px;
+    background-image: url("/src/rings.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: fixed;
+    display: inline;
+}
+.days{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 32px;
+font-size: 24px;
+background: #D3A6D6;
+color: #F8EC9F;
+text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+@media screen and (max-width:1400px){
+    .rings{display: none;}
+}
+
+  
+  .day {
+      padding-top: 3px;
+      padding-left: 8px;
+    border: 1px dashed #FFFFFF;
+    border-bottom: none;
+    width: 154px;
+    
+  }
+  
+  .dates {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    font-size: 20px;
+color: #843893;
+
+  }
+
+  .date {
+    width: 154px;
+    height: 80px;
+    border: 1px dashed #E7CFE9;
+    border-top: none;
+box-sizing: border-box;
+padding-left: 8px;
+  }
+  .buttonAction{
+    
+    background-repeat: repeat;
+    background-color: #E6D0E9;
+    background-image: linear-gradient(to bottom, transparent, transparent 16.6667%, #E6D0E9 16.6667%),
+    linear-gradient(to right, #FFFFFF, #FFFFFF 16.6667%, #E6D0E9 16.6667%);
+    background-size: 6px 6px;
+}
+.triangle{
+    position: fixed;
+width: 100px;
+height: 100px;
+bottom: -10px;
+background-repeat: no-repeat;
+background-size: contain;
+    background-image: url('./Polygon.png');
+}
+#rightT{
+    transform: scaleX(-1);
+    right: 0px;
+}
+.this{
+  opacity: 1;
+}
+.other {
+  opacity: 0.25;
+}
+.today {
+  width: 154px;
+height: 80px;
+  margin-left: -8px;
+  padding-left: 8px;
+  background: #F0DFEF;
+border: 2px solid #D3A6D6;
+}
+.flower{
+  background-image: url("./small_flower.png");
+}
+.allPlans{
+  width: 146px;
+    height: 360px;
+    overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.allPlans::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+.plans{
+  display: flex;
+  flex-direction: row;
+}
+.plan{
+  font-family: KOTRAHOPE;
+  text-decoration: underline 1px dashed #9451A0;
+}
+#newPlan{
+  width: 100%;
+  border:none;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #843893;
+  background-color: transparent;
+  text-decoration: underline 1px dashed #9451A0;
+}
+#newPlan:focus{
+  outline:none;
+  background-color: transparent;
+  color: #843893;
+}
+.schedule{
+  font-size: 16px;
+  overflow: scroll;
+    -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.schedule::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+#newSchedule{
+  width: 100%;
+  border:none;
+  cursor: pointer;
+  overflow-wrap: break-word;
+  -ms-user-select: none;
+  -moz-user-select: -moz-none;
+  -webkit-user-select: none;
+  user-select: none;
+  color: #843893;
+  background-color: transparent;
+  text-decoration: underline 1px dashed #9451A0;
+}
+#newSchedule:focus{
+  outline:none;
+  background-color: transparent;
+  color: #843893;
+}
