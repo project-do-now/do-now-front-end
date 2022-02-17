@@ -1,10 +1,10 @@
-import React, {Component} from "react";
+import React, {Component, useState} from "react";
 import styled from "styled-components";
 import Page from '../components/PageTemplate';
 
 import rings from '../images/center_rings.png';
 import ok from "../images/ok.png";
-import back from "../images/back.png";
+import back from "../images/back.png";  
 import EnterText from '../components/register/EnterText';
 
 const Flower = styled.img.attrs({alt:'flower image'})`
@@ -61,7 +61,8 @@ const RegisterTemplate = styled.div`
 
   position: relative;
   background: white;
-
+  justify-content: center;
+  align-items: center;
   /* margin: 0 auto; */
   margin-top: 60px;
   margin-left: 40px;
@@ -85,56 +86,64 @@ const Column = styled.div`
   display: flex;
   flex-direction: column;
 `
-class Register extends Component{
+const Register = (props) => {
+    const [data, setData] = useState("initial data");
 
-    state={
-        name: '',
-        phoneNumber: '',
-        birthday: '',
-        emailAddress: '',
-        password: '',
-        passwordConfirm: ''
-    }
+    // state={
+    //     name: '',
+    //     phoneNumber: '',
+    //     birthday: '',
+    //     emailAddress: '',
+    //     password: '',
+    //     passwordConfirm: ''
+    // }
 
-    handleChange = (e) => {
-        this.setState({
-        [e.target.name] : e.target.value
-        })
-    };
+    // handleChange = (e) => {
+    //     this.setState({
+    //     [e.target.name] : e.target.value
+    //     })
+    // };
 
-    handleSubmit = (e) => {
-        e.preventDefault(); // prevent page reloading
-        this.props.onCreate(this.state);
-        this.setState({
-            name: '',
-            phoneNumber: '',
-            birthday: '',
-            emailAddress: '',
-            password: '',
-            passwordConfirm: ''
-        })
-    }
+    // handleSubmit = (e) => {
+    //     e.preventDefault(); // prevent page reloading
+    //     this.props.onCreate(this.state);
+    //     this.setState({
+    //         // name: '',
+    //         // phoneNumber: '',
+    //         // birthday: '',
+    //         // emailAddress: '',
+    //         // password: '',
+    //         // passwordConfirm: ''
+    //     })
+    // }
 
-    handleClick = (e) => {
-        // href: 뒤로가기 o , replace: 뒤로가기 x
-        window.location.href = '/'
-    }
+    // handleClick = (e) => {
+    //     // href: 뒤로가기 o , replace: 뒤로가기 x
+    //     window.location.href = '/'
+    // }
 
 
-    handleDiaryClick = (e) => {
-        window.location.href = '/calendar'
-    }
-    render(){
+    // handleDiaryClick = (e) => {
+    //     window.location.href = '/calendar'
+    // }
+    
         return (
-            <form onSubmit={this.handleSubmit}>
+            // <form onSubmit={this.handleSubmit}>
   
               <DoublePage>
                 <Row>
                   {/* First page */}
                   <RegisterTemplate>
                   <Column>
-                    <EnterText></EnterText>
-                    <input
+                    <div>{data}</div>
+                    <EnterText  
+                      text='What is your password?' 
+                      type='password' 
+                      placeholder='Password' 
+                      setData={setData}>
+                    </EnterText>
+
+                    {/* <input
                       placeholder='name'
                       value={this.state.name}
                       onChange={this.handleChange}
@@ -173,7 +182,7 @@ class Register extends Component{
                       onChange={this.handleChange}
                       autoComplete='on'
                       name='passwordConfirm'
-                    />
+                    /> */}
                   </Column>
                   
                   </RegisterTemplate>
@@ -183,18 +192,18 @@ class Register extends Component{
                   
                   {/* Second Page */}
                   <RegisterTemplate>
-                    <Row>
+                    {/* <Row>
                       <Flower type="image" src={ok} onClick={this.handleDiaryClick} /> 
                       <Flower type="image" src={back} onClick={this.handleClick} /> 
-                    </Row>
+                    </Row> */}
                   </RegisterTemplate>
 
             </Row>
             </DoublePage>
             
-            </form>
+            // </form>
         );
-    }
+  
 }
 
 export default Register;
