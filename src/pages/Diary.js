@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import TodoTemplate from '../components/TodoTemplate';
-import TodoList from '../components/TodoList';
-import TodoCreate from '../components/TodoCreate';
+import TodoTemplate from '../components/todo/TodoTemplate';
+import TodoList from '../components/todo/TodoList';
+import TodoCreate from '../components/todo/TodoCreate';
 import Page from '../components/PageTemplate';
 
 class Diary extends Component{

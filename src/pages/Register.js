@@ -3,9 +3,9 @@ import styled from "styled-components";
 import Page from '../components/PageTemplate';
 
 import rings from '../images/center_rings.png';
-
 import ok from "../images/ok.png";
 import back from "../images/back.png";
+import EnterText from '../components/register/EnterText';
 
 const Flower = styled.img.attrs({alt:'flower image'})`
   width: 150px;
@@ -122,7 +122,7 @@ class Register extends Component{
 
 
     handleDiaryClick = (e) => {
-        window.location.href = '/diary'
+        window.location.href = '/calendar'
     }
     render(){
         return (
@@ -133,7 +133,7 @@ class Register extends Component{
                   {/* First page */}
                   <RegisterTemplate>
                   <Column>
-                    
+                    <EnterText></EnterText>
                     <input
                       placeholder='name'
                       value={this.state.name}

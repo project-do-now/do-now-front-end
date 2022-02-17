@@ -88,7 +88,7 @@ class Login extends Component {
     }
 
     handleDiaryClick = (e) => {
-      window.location.href = '/diary'
+      window.location.href = '/calendar'
   }
 
     render() {
